@@ -27,12 +27,12 @@ def main():
     # Lista de scripts com suas dependências, na ordem correta
     scripts = [
         {'name': 'allow_df.py', 'dependencies': []},
-        {'name': 'get_DATE.py', 'dependencies': ['allow_df.py']},
+        {'name': 'get_date.py', 'dependencies': ['allow_df.py']},
         {'name': 'get_horario.py', 'dependencies': ['allow_df.py']},
-        {'name': 'query_rds1.py', 'dependencies': ['cnx_rds1.py', 'get_DATE.py']},
-        {'name': 'comp1.py', 'dependencies': ['query_rds1.py', 'cnx_bucket.py']},
-        {'name': 'send_tomb1.py', 'dependencies': ['get_DATE.py']},
-        {'name': 'query_ver1.py', 'dependencies': ['cnx_rds1.py', 'get_DATE.py']}
+        {'name': 'query_rds1.py', 'dependencies': ['get_DATE.py']},
+       # {'name': 'comp1.py', 'dependencies': ['query_rds1.py', 'cnx_bucket.py']},
+       # {'name': 'send_tomb1.py', 'dependencies': ['get_DATE.py']},
+       # {'name': 'query_ver1.py', 'dependencies': ['cnx_rds1.py', 'get_DATE.py']}#
     ]
     
     processes = []
